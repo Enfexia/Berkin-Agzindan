@@ -290,7 +290,6 @@ button[disabled]{
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   color: #fff;
-    transition: all 0.6s;
 }
 
 .altbaslik{
@@ -299,13 +298,11 @@ button[disabled]{
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   cursor: pointer;
-  transition: all 0.6s;
 }
 
 .altbasliksonuk{
   font-size: 1vw;
   color: #838E96;
-  transition: all 0.6s;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   cursor: pointer;
@@ -442,7 +439,6 @@ padding: 1vw 1vw 1.5vw 1vw;
     background-repeat: no-repeat;
     height: 12vw;
     position: relative;
-      transition: all 0.6s;
 }
 
 .paylassvg{
