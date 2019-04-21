@@ -27,10 +27,3 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
   // ...
 });
-window.dataLayer = window.dataLayer || [];
-
-function gtag() {
-  dataLayer.push(arguments);
-}
-gtag('js', new Date());
-gtag('config', 'UA-61820447-13');
