@@ -336,7 +336,8 @@ color: #DCDCDC;
 
 .gonderiyazanadi{
   font-size: 1.3vw;
-  padding: 1vw;
+  padding-left: 1vw;
+      white-space: nowrap;
       padding-top: 3vw;
     display: block;
   color: #838E96;
