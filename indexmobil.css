@@ -1,0 +1,152 @@
+@media (max-width: 576px) {
+
+.ikimobilbosluk{
+  grid-column: span 2!important;
+}
+
+.besmobilbosluk{
+    grid-column: span 5!important;
+}
+.ucmobilbosluk{
+    grid-column: span 3!important;
+}
+.dortmobilbosluk{
+    grid-column: span 4!important;
+}
+
+.yedimobilbosluk{
+    grid-column: span 7!important;
+}
+
+.sekizmobilbosluk{
+grid-column: span 8!important;
+}
+.onmobilbosluk{
+    grid-column: span 10!important;
+}
+
+.ondokuzmobilbosluk{
+    grid-column: span 19!important;
+}
+.onsekizmobilbosluk{
+  grid-column: span 18!important;
+
+}
+
+.onbirmobilbosluk{
+    grid-column: span 11!important;
+}
+
+.onbesmobilbosluk{
+  grid-column: span 15!important;
+}
+.onaltimobilbosluk{
+  grid-column: span 16!important;
+}
+.yirmimobilbosluk{
+grid-column: span 20!important;
+}
+.ondortmobilbosluk{
+      grid-column: span 14!important;
+}
+.yerdoldurucu{
+  text-align: center;
+}
+.mobildeyok{
+  display: none;
+}
+.metinkutudinle{
+  text-align: center;
+  float: none!important;
+  display: block;
+}
+
+.dinletext{
+  font-size: 3vw!important;
+}
+.metinkutusvg{
+  height: 2vw!important;
+}
+
+.metinkutusu{
+  font-size: 2.5vw!important;
+  margin-top: 0vw!important;
+}
+.kadigiris{
+  border-radius: 1px!important;
+  height: 3.50vw!important;
+      font-size: 1.5vw!important;
+}
+#kullaniciadi{
+      vertical-align: bottom;
+}
+.paylasbuton{
+    border-radius: 1px!important;
+    height: 3.50vw!important;
+    font-size: 1.5vw!important;
+}
+
+.baslik{
+      font-size: 5vw!important;
+}
+
+.arasungermobil{
+  height: 10vw!important;
+}
+
+.altbaslik, .altbasliksonuk{
+      font-size: 1.5vw!important;
+}
+.gonderidinlemetin{
+    font-size: 2vw!important;
+              margin-top: 0.50vw!important;
+}
+
+.gonderidinlebuton{
+    height: 1.9vw!important;
+}
+
+.gonderimetin{
+  font-size: 2.5vw!important;
+}
+
+.paylasgonderimetin{
+      font-size: 2vw!important;
+          margin-top: 0.50vw!important;
+}
+
+.paylassvg{
+      height: 1.9vw!important;
+}
+
+.gonderipaylasimtarihi{
+      font-size: 2vw!important;
+}
+.gonderiyazanadi{
+      font-size: 2.3vw!important;
+}
+
+.begeni{
+  height: 3vw!important;
+}
+
+.begenisayi{
+      font-size: 2.5vw!important;
+}
+.mobildekaydir{
+  margin-right: 2vw;
+}
+.background, .background_paylasilan {
+    height: 20vw!important;
+
+}
+
+}
+
+
+
+@media (min-width: 576px) {
+.masaustundeyok{
+  display: none;
+}
+}

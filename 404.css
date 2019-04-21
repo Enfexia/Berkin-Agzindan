@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin-ext');
+html {
+  background: url('404.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.centered {
+  position: fixed; /* or absolute */
+  top: 40%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+h1{
+  text-align: center;
+  font-size: 10em;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+h2{
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+h3{
+  text-align: center;
+  font-size:1.5em;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+a{
+   text-decoration: none;
+   cursor: pointer;
+}

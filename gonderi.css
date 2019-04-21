@@ -1,0 +1,60 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+       opacity: 1;
+    }
+}
+
+html {
+   -webkit-animation: fadeIn 3s;
+   animation: fadeIn 3s;
+}
+
+.paylasmadinle{
+color:#09AD61;
+float:right;
+padding: 1vw;
+font-size: 1.5vw;
+cursor: pointer;
+padding-top:3vw;
+}
+
+.paylasmasvg{
+  height:1vw;
+}
+
+.baslik{
+  font-size: 2.5vw;
+}
+
+@media (max-width: 576px) {
+  .paylasmasvg{
+        padding-top: 3vw;
+  }
+  .paylasmadinle{
+    float: none!important;
+  }
+  .dinletext{
+     font-size:   2.3vw!important;
+         vertical-align: text-top;
+  }
+  .paylasmasvg{
+    float: left!important;
+        height: 1.9vw!important;
+  }
+  .paylasilanmetinsvg{
+    height: 3vw!important;
+margin-bottom: 1vw;
+  }
+  .paylasilanmetinbegenisayi{
+        font-size: 2.5vw!important;
+  }
+  .paylasilangonderitarih{
+      font-size: 2vw!important;
+  }
+  .paylasbuton{
+    font-size: 1.2vw!important;
+  }
+}

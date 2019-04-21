@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin-ext');
+/* 400,500,700 */
+.container{
+    display: grid;
+    grid-template-columns: repeat(24,1fr);
+/*    /* height: 100%; */
+    left: 0px;
+    top: 0;
+}
+
+.logo,.logobuyuk{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+.logo{
+  font-size: 1.5vw;
+}
+.logobuyuk{
+  font-size: 2vw;
+}
+
+body{
+  background: #2B2E43;
+  transition: all 0.6s;
+}
+
+#paylasilanlarinhepsi, .yirmidortgrid{
+  display: grid;
+  grid-template-columns: repeat(24,1fr);
+  /* height: 100%; */
+}
+
+.paylasilan{
+  display: grid;
+  grid-template-columns: repeat(24,1fr);
+  background-color: #33364A;
+  /* height: 100%; */
+  border-radius: 5px;
+  left: 0px;
+  top: 0;
+}
+
+.onikigrid{
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  /* height: 100%; */
+  left: 0px;
+  top: 0;
+}
+
+.ondortgrid{
+  display: grid;
+  grid-template-columns: repeat(14,1fr);
+  /* height: 100%; */
+  left: 0px;
+  top: 0;
+}
+
+.birbosluk{
+  grid-column: span 1;
+}
+
+.ikibosluk{
+  grid-column: span 2;
+}
+
+.ucbosluk{
+  grid-column: span 3;
+}
+
+.dortbosluk{
+  grid-column: span 4;
+}
+
+.besbosluk{
+  grid-column: span 5;
+}
+
+.altibosluk{
+  grid-column: span 6;
+}
+
+.dokuzbosluk{
+  grid-column: span 9;
+}
+
+.sekizbosluk{
+  grid-column: span 8;
+}
+
+.onbosluk{
+  grid-column: span 10;
+}
+
+.onbirbosluk{
+  grid-column: span 11;
+}
+
+.onikibosluk{
+  grid-column: span 12;
+}
+
+.onucbosluk{
+  grid-column: span 13;
+}
+
+.ondortbosluk{
+  border-radius: 5px 5px 5px 5px;
+  grid-column: span 14;
+}
+
+.onbesbosluk{
+  grid-column: span 15;
+}
+
+.onaltibosluk{
+  grid-column: span 16;
+}
+
+.yirmibosluk{
+  grid-column: span 20;
+}
+
+.yirmibir{
+  grid-column: span 21;
+}
+
+
+
+.yirmidortbosluk{
+  grid-column: span 24;
+}
+.clearfix {
+  overflow: auto;
+}
+
+.paylasilankapsayici{
+  background-color: #33364A;
+}
+
+
+.metinkutudinle{
+  color:#09AD61;float:right;padding: 1vw;font-size: 1.5vw;cursor: pointer;
+}
+
+.metinkutusvg{
+  height:1vw;
+}
+.metinkutusu{
+  height: 16vw;width: 90%;margin-top: -1vw;background:none;resize:none;color:#E9F1F9;font-size: 1.7vw;
+}
+
+.paylasilanmetinbegenisayi{
+  font-size: 1.30vw;
+  margin-left: 4px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  height: 2vw;
+  margin-top: 1.4vw;
+  display: block;
+  color: #DCDCDC;
+}
+
+.paylasilangonderitarih{
+  margin-top: 1.5vw;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #838E96;
+  display: block;
+  font-size: 1.1vw;
+  padding-left: 1vw;
+  padding-bottom: 3vw;
+}
+
+
+.paylasilanmetinsvg{
+height: 2vw;
+    padding-left: 1vw;
+        margin-top: 1vw;
+
+}
+
+textarea {
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none; /*remove the resize handle on the bottom right*/
+}
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: 'Roboto', sans-serif;
+  color: #E9F1F9;
+  font-weight: regular;
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+  box-sizing: border-box;
+-moz-box-sizing: border-box;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+.paylasbuton{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  background-color: #09AD61;
+  color: #fff;
+  cursor: not-allowed;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 2.69vw;
+  margin-top: 10px;
+  font-size: 1vw;
+  transition: all 0.6s;
+}
+
+
+
+.paylasbutonpaylassayfa{
+    transition: all 0.6s;
+background-color: #12AAFA;
+cursor: pointer;
+
+}
+
+button:disabled,
+button[disabled]{
+  opacity: 0.4;
+}
+
+
+.kadigiris{
+  height: 2.69vw;
+  width: 95%;
+  font-size: 0.9vw;
+    outline: none;
+  margin-top: 10px;
+  border: none;
+  padding-left: 1vw;
+  background: #33364A;
+  resize: none;
+  color: #E9F1F9;
+    transition: all 0.6s;
+}
+
+.baslik {
+  font-size: 3vw;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #fff;
+    transition: all 0.6s;
+}
+
+.altbaslik{
+  font-size: 1vw;
+  color: #DCDCDC;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+.altbasliksonuk{
+  font-size: 1vw;
+  color: #838E96;
+  transition: all 0.6s;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.begenisayi{
+font-size: 1.5vw;
+text-align: center;
+font-family: 'Roboto', sans-serif;
+font-weight: 700;
+display: block;
+width: 100%;
+color: #DCDCDC;
+}
+
+.kapsayici{
+  position: relative;
+  top: 50%;
+  cursor: pointer;
+      padding-left: 1vw;
+  transform: translateY(-50%);
+}
+
+
+.begeni{
+  height: 2vw;
+  width: 100%;
+}
+
+.gonderiyazanadi{
+  font-size: 1.3vw;
+  padding: 1vw;
+      padding-top: 3vw;
+    display: block;
+  color: #838E96;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+    transition: all 0.6s;
+}
+
+.gonderipaylasimtarihi{
+  font-size: 1vw;
+  display: block;
+  padding-bottom: 1vw;
+      padding-top: 2vw;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color:#838E96;
+  display: flex;
+    align-items: flex-end;
+      transition: all 0.6s;
+}
+
+.gonderimetin{
+  font-size: 1.5vw;
+  transition: all 0.6s;
+    display: block;
+padding: 1vw 1vw 1.5vw 1vw;
+  color: #F0F0F0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  word-break: break-word;
+}
+
+.sayfasonu{
+  text-align: center;
+      width: 100%;
+      display: block;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      font-size: 1.2vw;
+      color: white;
+}
+
+.gonderidinlebuton{
+      height: 0.9vw;
+        transition: all 0.6s;
+      margin-right: 4px;
+      margin-top: 1vw;
+      margin-bottom: 1vw;
+      float: right;
+      cursor: pointer;
+}
+
+.gonderidinlemetin{
+
+  font-size: 1vw;
+  cursor: pointer;
+    transition: all 0.6s;
+  margin-top: 0.95vw;
+  margin-bottom: 1vw;
+  float: left;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #09AD61;
+}
+
+.alici{
+  /* height: 100%; */
+}
+
+.dinletext{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+      font-size: 1vw;
+}
+
+#kullaniciadi{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+
+@keyframes placeHolderShimmer{
+
+0% {
+    background-position: -468px 0;
+}
+100% {
+    background-position: 468px 0;
+}
+}
+
+.background, .background_paylasilan {
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: placeHolderShimmer;
+    -webkit-animation-timing-function: linear;
+    background: #33364A;
+    background-image: linear-gradient(to right, #33364A 0%, #2B2E43 20%, #33364A 40%, #33364A 100%);
+    background-repeat: no-repeat;
+    height: 12vw;
+    position: relative;
+      transition: all 0.6s;
+}
+
+.paylassvg{
+  height: 0.9vw;
+margin-right: 4px;
+margin-top: 1vw;
+padding-bottom: 1.2vw;
+margin-bottom: 1vw;
+float: right;
+cursor: pointer;
+}
+.paylasgonderimetin{
+  font-size: 1vw;
+cursor: pointer;
+margin-top: 0.95vw;
+margin-bottom: 1vw;
+float: left;
+font-family: 'Roboto', sans-serif;
+font-weight: 500;
+color: #12AAFA;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+    <link rel="stylesheet" href="indexmobil.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+  <script src="firebaseconfig.js" charset="utf-8"></script>
+  <script src="notalar.js" charset="utf-8"></script>
+  <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="yirmidortbosluk" style="height: 3vw;"></div>
+  <div class="birbosluk yedimobilbosluk"></div>
+  <div class="ikibosluk onmobilbosluk">
+    <div class="logo">
+      <div class="yerdoldurucu">
+        <span class="logo">Berk'in</span>
+        <span class="logobuyuk">Ağzından</span>
+      </div>
+    </div>
+  </div>
+  <div class="yirmibir yedimobilbosluk"></div>
+  <div class="yirmidortbosluk" style="height: 9vw;"></div>
+  <div class="besbosluk ikimobilbosluk"></div>
+  <div class="ondortbosluk yirmimobilbosluk" style="height: 23vw;background:#33364A">
+    <div class="ondortgrid">
+      <div class="onikibosluk mobildeyok" ></div>
+      <div class="besmobilbosluk masaustundeyok"></div>
+      <div class="ikibosluk dortmobilbosluk">
+        <span class="metinkutudinle" onclick="metincal('metinkutusu','metinkutusu',this)">
+          <svg viewBox="0 0 9 10" class="metinkutusvg" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 10V0L9 5L0 10Z" fill="#09AD61"/>
+          </svg>
+          <span class="dinletext ">Dinle</span>
+        </span>
+      </div>
+    <div class="besmobilbosluk masaustundeyok"></div>
+      <div class="ondortbosluk" style="height: 17vw;text-align: center;">
+        <textarea onkeyup="boslukkontrolu(this.value)" maxlength="200" id="metinkutusu" minlength=20 class="metinkutusu" type="text" name="" placeholder="Bir şeyler yaz ve yazdığın sese dönüşsün!" value=""></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="besbosluk ikimobilbosluk"></div>
+  <div class="onbirbosluk ondortmobilbosluk" style="height: 4vw;"></div>
+  <div class="besbosluk"style="height: 4vw;">
+    <input type="text" name="" value="" id="kullaniciadi" maxlength="20"  placeholder="K. Adı:" class="kadigiris">
+  </div>
+  <div class="ucbosluk"style="height: 4vw;">
+    <button type="submit" name="button" class="paylasbuton"  disabled onclick="paylas()">Paylaş</button>
+  </div>
+  <div class="yirmidortbosluk" style="height: 7vw;"></div>
+  <div class="besbosluk ikimobilbosluk" style="height: 5vw;"></div>
+  <div class="altibosluk onbesmobilbosluk" style="height: 5vw;">
+    <span class="baslik">
+      Paylaşılan Sesler
+    </span>
+  </div>
+  <div class="onucbosluk yedimobilbosluk" style="height: 5vw;"></div>
+  <div class="besbosluk ikimobilbosluk arasungermobil" style="height: 2vw;"></div>
+  <div class="ikibosluk ucmobilbosluk " style="height: 2vw;">
+    <span class="altbaslik" onclick="enbegenileyenile()">En Beğenilenler</span>
+  </div>
+  <div class="ikibosluk ucmobilbosluk" style="height: 2vw;">
+    <span class="altbasliksonuk" onclick="enyenibutonu()">En Yeniler</span>
+  </div>
+  <div class="onbesbosluk onaltimobilbosluk" style="height: 2vw;"></div>
+  <div class="yirmidortbosluk" style="height: 3vw;"></div>
+  <div id="paylasilanlarinhepsi" class="yirmidortbosluk">
+    <div class="besbosluk ikimobilbosluk"></div>
+    <div class="ondortbosluk yirmimobilbosluk" style="height:100%">
+      <div class="paylasilan background">
+
+        </div>
+      </div>
+      <div class="besbosluk ikimobilbosluk"></div>
+
+<!---
+
+  <div class="besbosluk"></div>
+  <div class="ondortbosluk" style="height:100%">
+    <div class="paylasilan">
+        <div class="birbosluk">
+          <div class="kapsayici">
+            <svg class="begeni" viewBox="0 0 29 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M28.4812 12.064C28.4812 13.064 27.3236 18.437 26.7366 20.314C25.8984 23.003 23.8357 24 20.8562 24C18.176 24 16.0675 23.383 14.5918 22.842C12.1851 21.959 10.1412 21.323 7.34952 21.096L7.34952 22L0.305633 22L0.305632 10L7.34952 10L7.34952 10.73C10.2305 10.145 13.0457 8.664 14.863 3.328C15.43 1.668 16.0041 -1.3724e-06 18.1889 -1.5634e-06C22.2368 -1.91728e-06 21.7167 5.531 20.767 8.814C22.0654 9.28 24.0154 9.506 25.4359 9.558C27.11 9.618 28.4812 10.416 28.4812 12.064ZM5.00156 12L2.65359 12L2.6536 20L5.00156 20L5.00156 12ZM23.4976 13.302L25.1342 13.135C26.3962 13.006 26.4314 11.61 25.194 11.551C21.9668 11.397 19.2537 10.538 18.0093 9.995C18.5141 8.247 19.0893 6.532 19.0893 4.461C19.0893 1.956 18.1725 0.794997 17.1182 3.887C14.7785 10.746 11.1814 12.251 7.34952 13L7.34952 19C10.3091 19.072 12.8907 20.041 15.5193 21.005C17.5514 21.75 21.2119 22.5 23.0515 21.619C24.5718 20.783 24.3593 19.885 23.3943 19.958L22.4892 19.99C21.5324 20.084 21.4091 18.922 22.3612 18.849C22.3612 18.849 23.912 18.787 24.4098 18.734C25.5556 18.611 25.6167 17.127 24.3629 17.183C23.8263 17.207 23.021 17.224 23.021 17.224C22.0853 17.255 21.9938 16.146 22.8555 16.052C22.8555 16.052 23.6937 16.047 24.9228 15.953C26.152 15.859 26.1884 14.344 24.9181 14.39C23.8991 14.427 23.6632 14.417 23.6632 14.417C22.7827 14.412 22.6359 13.389 23.4976 13.302Z" fill="#12AAFA"/>
+            </svg>
+            <span class="begenisayi">5</span>
+          </div>
+        </div>
+        <div class="onikibosluk">
+          <div class="onikigrid">
+            <div class="ikibosluk">
+              <span class="gonderiyazanadi">
+                Faruk Okuyucu
+              </span>
+            </div>
+            <div class="dokuzbosluk" ></div>
+            <div class="birbosluk">
+              <span class="gonderipaylasimtarihi">
+                21.02.2019
+              </span>
+            </div>
+            <div class="onikibosluk">
+              <span class="gonderimetin">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis malesuada ex. Suspendiss tincidunt magna tortor, quis vestibulum eros lacinia et.
+              </span>
+            </div>
+            <div class="dokuzbosluk" ></div>
+            <div class="ikibosluk" >
+                <div class="onikigrid">
+                  <div class="dortbosluk">
+                    <svg class="paylassvg"  viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.875 2.625C2.91037 2.625 3.75 3.46463 3.75 4.5C3.75 5.53538 2.91037 6.375 1.875 6.375C0.839625 6.375 0 5.53538 0 4.5C0 3.46463 0.839625 2.625 1.875 2.625ZM6.04575 7.14937C6.01837 7.26225 6 7.3785 6 7.5C6 8.32837 6.67163 9 7.5 9C8.32837 9 9 8.32837 9 7.5C9 6.67163 8.32837 6 7.5 6C7.06313 6 6.6735 6.18975 6.39937 6.48787L4.34137 5.39025C4.25513 5.62875 4.1355 5.85113 3.98775 6.05175L6.04575 7.14937ZM9 1.5C9 0.671625 8.32837 0 7.5 0C6.67163 0 6 0.671625 6 1.5C6 1.6215 6.01837 1.73775 6.04575 1.85063L3.98775 2.94825C4.13587 3.14887 4.25513 3.37088 4.34137 3.60975L6.39937 2.51213C6.6735 2.81025 7.06313 3 7.5 3C8.32837 3 9 2.32838 9 1.5Z" fill="#12AAFA"/>
+            </svg>
+</div>
+  <div class="altibosluk">
+              <span class="paylasgonderimetin">Paylaş</span></div>
+                </div>
+            </div>
+            <div class="birbosluk" >
+                <div class="onikigrid">
+                  <div class="dortbosluk">
+              <svg class="gonderidinlebuton"viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0.467468 9.16668V0.833344L9.27233 5.00001L0.467468 9.16668Z" fill="#236F97"/>
+  </svg></div>
+  <div class="altibosluk">
+              <span class="gonderidinlemetin">Dinle</span></div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="birbosluk"></div>
+      </div>
+    </div>
+
+
+    <div class="besbosluk"></div>
+  -->
+
+  </div>
+  <div class="yirmidortbosluk" style="height: 4vw;" class="paylasilan"></div>
+</div>
+</body>
+</html>
