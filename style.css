@@ -252,7 +252,6 @@ button,
   height: 2.69vw;
   margin-top: 10px;
   font-size: 1vw;
-  transition: all 0.6s;
 }
 
 
@@ -281,7 +280,6 @@ button[disabled]{
   background: #33364A;
   resize: none;
   color: #E9F1F9;
-    transition: all 0.6s;
 }
 
 .baslik {
