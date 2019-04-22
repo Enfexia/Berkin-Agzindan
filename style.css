@@ -118,6 +118,17 @@ body{
   grid-column: span 16;
 }
 
+.onyedibosluk{
+  grid-column: span 17;
+}
+.onsekizbosluk{
+    grid-column: span 18;
+}
+
+.ondokuzbosluk{
+  grid-column: span 19;
+}
+
 .yirmibosluk{
   grid-column: span 20;
 }
@@ -179,6 +190,15 @@ height: 2vw;
     padding-left: 1vw;
         margin-top: 1vw;
 
+}
+
+.nedir{
+  color: white;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      font-size: 1.2vw;
+      margin-top: 2vw;
+display: block;
 }
 
 textarea {
