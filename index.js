@@ -197,7 +197,7 @@ function enyenigonderilerisayfalandir(girdiid) {
           var begendimi = false
         }
         i++
-        if(gelenverisayisi == i) {
+        if(gelenverisayisi == i && gelenverisayisi != 5) {
           bittimi = true;
         }
         ilkkezmi = false;
@@ -235,9 +235,10 @@ function enbegenilengonderilerisayfalandir(girdiid, ensongirdibegenisayisi) {
       db.collection("sesler").doc(begeni.id).get().then(function(querySnapshot) {
         var gonderi_verileri = querySnapshot.data()
         i++
-        if(gelenverisayisi == i) {
+        if(gelenverisayisi == i && gelenverisayisi != 5) {
           bittimi = true;
         }
+        console.log(i)
         gonderirenderla(gonderi_verileri['Kad'], tarihdonustur(gonderi_verileri['Tarih']), gonderi_verileri['Metin'], begenisayi, begendimi, querySnapshot.id, "begeni", bittimi)
       });
       /*
