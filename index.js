@@ -234,7 +234,7 @@ function enbegenilengonderilerisayfalandir(girdiid, ensongirdibegenisayisi) {
         if(gelenverisayisi == i && gelenverisayisi != 5) {
           bittimi = true;
         }
-        console.log(i)
+        //  console.log(i)
         gonderirenderla(gonderi_verileri['Kad'], tarihdonustur(gonderi_verileri['Tarih']), gonderi_verileri['Metin'], begenisayi, begendimi, querySnapshot.id, "begeni", bittimi)
       });
       /*
