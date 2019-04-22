@@ -128,7 +128,7 @@ function ilkgonderibegeni(guid, gonderiuid) {
     gid: guid
   }).then(function() {
     //  console.log("Document successfully written!");
-    window.location.replace("gonderi.html#" + guid);
+    window.location.replace("gonderi#" + guid);
   }).catch(function(error) {
     console.error("Error writing document: ", error);
   });
@@ -562,5 +562,5 @@ function rastgelenotaal(obj) {
 enbegenilengonderilerial()
 
 function gonderipaylas(guid) {
-  window.open('gonderi.html#' + guid, '_blank');
+  window.open('gonderi#' + guid, '_blank');
 }
