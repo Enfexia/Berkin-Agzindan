@@ -181,10 +181,6 @@ function enyenigonderilerisayfalandir(girdiid) {
   var bittimi = false
   db.collection("sesler").orderBy("gid", "desc").startAfter(girdiid).limit(5).get().then(function(querySnapshot) {
     var gelenverisayisi = querySnapshot.size
-    if(querySnapshot.size != 5) {
-      //console.log("kucukk")
-      var bittimi = true;
-    }
     //  console.log(bittimi)
     var i = 0;
     querySnapshot.forEach(function(tarih) {
