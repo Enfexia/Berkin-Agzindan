@@ -167,22 +167,26 @@ function sayfalandirma() {
   var girdininturu = ensongirdiid.split("/")[0];
   var girdiid = ensongirdiid.split("/")[1];
   var ensongirdibegenisayisi = tumbegeniler[tumbegeniler.length - 1].innerText;
+  //  console.log("sayfalandirma")
   if(girdininturu == "begeni") {
     enbegenilengonderilerisayfalandir(girdiid, ensongirdibegenisayisi)
   } else if(girdininturu == "yeni") {
     enyenigonderilerisayfalandir(girdiid)
   } else {
-    //  console.log("sayfalandirmada hata var")
+    //console.log("sayfalandirmada hata var")
   }
 }
 
 function enyenigonderilerisayfalandir(girdiid) {
   var bittimi = false
   db.collection("sesler").orderBy("gid", "desc").startAfter(girdiid).limit(5).get().then(function(querySnapshot) {
-    if(querySnapshot.size < 5) {
-      //  console.log("kucukk")
+    var gelenverisayisi = querySnapshot.size
+    if(querySnapshot.size != 5) {
+      //console.log("kucukk")
       var bittimi = true;
     }
+    //  console.log(bittimi)
+    var i = 0;
     querySnapshot.forEach(function(tarih) {
       // doc.data() is never undefined for query doc snapshots
       var tarihler = tarih.data()
@@ -191,6 +195,10 @@ function enyenigonderilerisayfalandir(girdiid) {
           var begendimi = true
         } else {
           var begendimi = false
+        }
+        i++
+        if(gelenverisayisi == i) {
+          bittimi = true;
         }
         ilkkezmi = false;
         gonderirenderla(tarihler['Kad'], tarihdonustur(tarihler['Tarih']), tarihler['Metin'], querySnapshot.data()['bs'], begendimi, tarih.id, "yeni", bittimi)
@@ -206,15 +214,16 @@ function enyenigonderilerisayfalandir(girdiid) {
 function enbegenilengonderilerisayfalandir(girdiid, ensongirdibegenisayisi) {
   //console.log(ensongirdibegenisayisi, girdiid)
   var bittimi = false;
+  //  console.log("enbegenilengonderilerisayfalandir")
   db.collection("begeniler").orderBy("bs", "desc").orderBy("gid", "desc").startAfter(parseInt(ensongirdibegenisayisi, 10), girdiid).limit(5).get().then(function(querySnapshot) {
-    if(querySnapshot.size < 5) {
-      //    console.log("kucukk")
-      var bittimi = true;
-    }
-    //  console.log(querySnapshot.size)
+    var gelenverisayisi = querySnapshot.size
     //  console.log(bittimi)
+    //  console.log(querySnapshot.size)
+    if(gelenverisayisi == 0) {}
+    var i = 0
     querySnapshot.forEach(function(begeni) {
       //    console.log(begeni.data())
+      //  var gelenverisayisi = gelenverisayisi - 1;
       var begenenkisiler = begeni.data();
       //  console.log(begeni.id)
       var begenisayi = begenenkisiler['bs']
@@ -223,8 +232,22 @@ function enbegenilengonderilerisayfalandir(girdiid, ensongirdibegenisayisi) {
       } else {
         var begendimi = false
       }
+      db.collection("sesler").doc(begeni.id).get().then(function(querySnapshot) {
+        var gonderi_verileri = querySnapshot.data()
+        i++
+        if(gelenverisayisi == i) {
+          bittimi = true;
+        }
+        gonderirenderla(gonderi_verileri['Kad'], tarihdonustur(gonderi_verileri['Tarih']), gonderi_verileri['Metin'], begenisayi, begendimi, querySnapshot.id, "begeni", bittimi)
+      });
+      /*
       db.collection("sesler").get().then(function(querySnapshot) {
         querySnapshot.forEach(function(sesler) {
+          var gelenverisayisi = gelenverisayisi - 1;
+          if(gelenverisayisi == 0) {
+            bittimi = true
+          }
+          console.log(gelenverisayisi)
           // doc.data() is never undefined for query doc snapshots
           if(begeni.id == sesler.id) {
             var gonderi_verileri = sesler.data();
@@ -233,6 +256,7 @@ function enbegenilengonderilerisayfalandir(girdiid, ensongirdibegenisayisi) {
           }
         });
       });
+      */
     })
   });
 }
@@ -279,7 +303,6 @@ function gonderiduzenle(kullaniciadi, gonderipaylasimtarihi, gonderi, gonderibeg
   } else {
     gonderirengi = "#DCDCDC"
   }
-  //console.log(ensonmu)
   if(ensonmu == true) {
     var sayfaalti = '<div class="besbosluk"></div><div class="ondortbosluk" style="height:100%"><span class="sayfasonu">Tüm Gönderileri Görüntüledin</span></div><div class="besbosluk"></div>'
     var yukleniyor = ''
@@ -342,6 +365,7 @@ window.onscroll = function() {
 function kaydirma() {
   if(ilkkezmi == true && document.getElementsByClassName("kapsayici")[0] && (window.innerHeight + window.scrollY) >= document.getElementById(document.getElementsByClassName("kapsayici")[document.getElementsByClassName("kapsayici").length - 2].id).offsetTop) {
     //  console.log("ilk kez yükleniyo")
+    //  console.log("kaydirma")
     ilkkezmi = false;
     sayfalandirma()
   }
